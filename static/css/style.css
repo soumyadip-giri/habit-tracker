@@ -1,0 +1,172 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    max-width: 1400px;
+    overflow: hidden;
+}
+
+.header-section {
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.greeting {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.datetime {
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.left-section, .right-section {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.left-section {
+    flex: 1;
+    max-width: 45%;
+}
+
+.right-section {
+    flex: 1;
+    max-width: 55%;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    font-weight: 600;
+    padding: 12px 20px;
+}
+
+.task-checkbox {
+    transform: scale(1.3);
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.table-responsive {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.table-hover tbody tr:hover {
+    transform: translateX(3px);
+    transition: transform 0.2s ease;
+}
+
+#calendar {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 400px;
+}
+
+.fc-daygrid-day-number {
+    color: #333;
+    font-weight: 500;
+}
+
+.fc-day-today {
+    background-color: rgba(255, 235, 59, 0.2) !important;
+}
+
+.fc-event {
+    cursor: pointer;
+    font-size: 0.8em;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background-color: #4b6cb7;
+    border: none;
+}
+
+.chart-container {
+    height: 200px;
+    position: relative;
+}
+
+.filter-results {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Form styles */
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .left-section, .right-section {
+        max-width: 100%;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .greeting {
+        font-size: 1.8rem;
+    }
+    
+    .left-section, .right-section {
+        margin: 5px 0;
+        padding: 15px;
+    }
+    
+    .datetime {
+        font-size: 1rem;
+    }
+}
